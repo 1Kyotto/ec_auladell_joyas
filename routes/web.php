@@ -9,6 +9,7 @@ use App\Http\Controllers\ArosController;
 use App\Http\Controllers\BrazaletesController;
 use App\Http\Controllers\CollaresController;
 use App\Http\Controllers\EstadoOrdenController;
+use App\Http\Controllers\UsuariosController;
 
 Route::get('/',[HomeController::class, 'index'])->name('home.index');
 
@@ -22,3 +23,8 @@ Route::get('/joyas/collares',[CollaresController::class, 'index'])->name('collar
 
 //Productos
 Route::get('/estado-orden',[EstadoOrdenController::class, 'index'])->name('estado-orden.index');
+
+//Usuarios
+Route::get('/iniciar-sesion',[UsuariosController::class, 'index'])->name('usuarios.index');
+Route::get('/restaurar-contrasena',[UsuariosController::class, 'restaurarContrasena'])->name('usuarios.contrasena');
+Route::get('/registrarse',[UsuariosController::class, 'registrarse'])->name('usuarios.registrarse');
