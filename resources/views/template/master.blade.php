@@ -13,10 +13,10 @@
         <div class="nav col-span-6 bg-teal-500">
 			NAVBAR
 			<div class="nav-1">
-
+                LOGO
 			</div>
 			<div class="nav-2">
-
+                MENU
 			</div>
 		</div>
 
