@@ -38,8 +38,16 @@
 
         @yield('contenido')
 
-        <footer class="col-span-6 bg-cyan-600">
-            FOOTER
-        </footer>
+        <footer class="col-span-6 bg-cyan-600 grid grid-cols-3">
+			        <div class="col-span-1 text-center">
+                Redes sociales
+              </div>
+              <div class="col-span-1 text-center">
+                Informacion
+              </div>
+              <div class="col-span-1 text-center">
+                Servicio al cliente
+              </div>
+	    </footer>
     </body>
 </html>

@@ -9,7 +9,6 @@
 
     </head>
     <body class="grid grid-cols-6 text-center">
-        
         <div class="nav col-span-6 bg-teal-500 grid grid-rows-2">
             <div class="nav-1 row-span-1 pt-4">
                 <div class="grid grid-cols-3 gap-3">
@@ -47,8 +46,16 @@
         </div>
 
 
-        <footer class="col-span-6 bg-cyan-600">
-			FOOTER
-		</footer>
+        <footer class="col-span-6 bg-cyan-600 grid grid-cols-3">
+            <div class="col-span-1 text-center">
+              Redes sociales
+            </div>
+            <div class="col-span-1 text-center">
+              Informacion
+            </div>
+            <div class="col-span-1 text-center">
+              Servicio al cliente
+            </div>
+      </footer>
     </body>
 </html>

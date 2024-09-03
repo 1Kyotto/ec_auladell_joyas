@@ -8,7 +8,7 @@
         @vite('resources/css/app.css')
 
     </head>
-    <body class="grid grid-cols-12 h-screen text-center">
+    <body class="grid grid-cols-12 text-center">
         <div class="col-span-2 bg-blue-600">
             SIDEBAR
         </div>
