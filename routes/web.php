@@ -30,6 +30,7 @@ Route::get('/iniciar-sesion',[UsuariosController::class, 'index'])->name('usuari
 Route::get('/restaurar-contrasena',[UsuariosController::class, 'restaurarContrasena'])->name('usuarios.contrasena');
 Route::get('/registrarse',[UsuariosController::class, 'registrarse'])->name('usuarios.registrarse');
 Route::post('/iniciar-sesion/autenticar',[UsuariosController::class, 'autenticar'])->name('usuarios.autenticar');
+Route::get('/cerrar-sesion', [UsuariosController::class, 'cerrarSesion'])->name('usuarios.logout');
 
 //Administrador
 Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard.index')

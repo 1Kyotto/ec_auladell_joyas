@@ -13,13 +13,26 @@
             SIDEBAR
         </div>
         <div class="col-span-10 grid grid-cols-4 grid-rows-12 bg-orange-600">
-            <div class="NAVBAR col-span-4 bg-lime-800 row-span-2">
-                NAVBAR
-                <div class="nav-1">
-                    LOGO
+            <div class="bg-teal-400 row-span-2 col-span-4 grid grid-cols-9 grid-rows-2">
+                <div class="row-span-1 grid grid-cols-3 col-span-9 border-b border-black">
+                    <div class="">01</div>
+                    <div class="">02</div>
+                    <div class="">
+                        @auth
+                        <a href="{{ route('usuarios.logout') }}">Cerrar Sesión</a>
+                        @else
+                            <a href="{{ route('usuarios.index') }}">Iniciar Sesión</a>
+                        @endauth
+                    </div>
                 </div>
-                <div class="nav-2">
-                    MENU
+
+                <div class="row-span-1 grid grid-cols-6 col-span-9">
+                    <div class="">04</div>
+                    <div class="">05</div>
+                    <div class="">06</div>
+                    <div class="">07</div>
+                    <div class="">08</div>
+                    <div class="">09</div>
                 </div>
             </div>
             @yield('contenido')

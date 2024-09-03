@@ -10,15 +10,21 @@
     </head>
     <body class="grid grid-cols-6 text-center">
         <div class="nav col-span-6 bg-teal-500 grid grid-rows-2">
-			<div class="nav-1 row-span-1 pt-4">
+            <div class="nav-1 row-span-1 pt-4">
                 <div class="grid grid-cols-3 gap-3">
                     <div>01</div>
                     <div>02</div>
-                    <div>03</div>
+                    <div>
+                        @auth
+                            <a href="{{ route('usuarios.logout') }}">Cerrar Sesión</a>
+                        @else
+                            <a href="{{ route('usuarios.index') }}">Iniciar Sesión</a>
+                        @endauth
+                    </div>
                 </div>
             </div>
-          <hr class="w-screen border-t-2 border-black my-1">
-			<div class="nav-2 row-span-1 pb-4">
+            <hr class="w-screen border-t-2 border-black my-1">
+            <div class="nav-2 row-span-1 pb-4">
                 <div class="grid grid-cols-6 gap-3">
                     <div>04</div>
                     <div>05</div>
@@ -27,13 +33,13 @@
                     <div>08</div>
                     <div>09</div>
                 </div>
-			</div>
-		</div>
+            </div>
+        </div>
 
-      @yield('contenido')
+        @yield('contenido')
 
         <footer class="col-span-6 bg-cyan-600 grid grid-cols-3">
-			  <div class="col-span-1 text-center">
+			        <div class="col-span-1 text-center">
                 Redes sociales
               </div>
               <div class="col-span-1 text-center">
