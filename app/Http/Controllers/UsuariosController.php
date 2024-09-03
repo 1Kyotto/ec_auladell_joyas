@@ -61,4 +61,10 @@ class UsuariosController
 
         return back()->withErrors('Email o Contraseña incorrectas.')->onlyInput('email');
     }
+
+    function cerrarSesion()
+    {
+        Auth::logout();
+        return redirect()->route('home.index');
+    }
 }
