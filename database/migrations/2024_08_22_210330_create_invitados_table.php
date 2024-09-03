@@ -13,11 +13,10 @@ return new class extends Migration
     {
         Schema::create('invitados', function (Blueprint $table) {
             $table->increments('id_invitado');
-            $table->string('nombre',30);
-            $table->string('telefono',9);
-            $table->string('email',30)->unique();
-            $table->char('rol',1)->default('C'); #A=Admin, C=Cliente
+            $table->unsignedInteger('id_contacto');
             $table->timestamps();
+
+            $table->foreign('id_contacto')->references('id_contacto')->on('contactos');
         });
     }
 

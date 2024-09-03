@@ -8,24 +8,19 @@ use App\Models\DireccionEnvio;
 use App\Models\Carrito;
 use App\Models\Pedido;
 use App\Models\Inventario;
+use App\Models\Contacto;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 
-class Usuario extends Model
+class Usuario extends Authenticatable
 {
     use HasFactory;
 
     //Especificaciones de nombre de la tabla, sus atributos y funciones de cuenta
     protected $table = 'usuarios';
+    protected $primaryKey = 'id_usuario';
     protected $fillable = ['id_contacto', 'contraseña', 'rol'];
     protected $hidden = ['contraseña'];
-
-    protected function hashContrasena(): array
-    {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
-    }
 
     //Un usuario puede tener muchas direcciones de envío
     public function direcciones()
@@ -54,6 +49,6 @@ class Usuario extends Model
     //Contacto
     public function contacto()
     {
-        return $this->hasOne(Inventario::class, 'id_usuario');
+        return $this->belongsTo(Contacto::class, 'id_contacto');
     }
 }

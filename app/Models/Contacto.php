@@ -18,6 +18,6 @@ class Contacto extends Model
         return $this->hasMany(Invitado::class,'id_contacto');
     }
     public function usuarios(){
-        return $this->belongsTo(Usuario::class,'id_usuario');
+        return $this->hasMany(Usuario::class,'id_contacto');
     }
 }
