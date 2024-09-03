@@ -8,6 +8,7 @@ use App\Http\Controllers\AnillosController;
 use App\Http\Controllers\ArosController;
 use App\Http\Controllers\BrazaletesController;
 use App\Http\Controllers\CollaresController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EstadoOrdenController;
 use App\Http\Controllers\UsuariosController;
 
@@ -28,3 +29,8 @@ Route::get('/estado-orden',[EstadoOrdenController::class, 'index'])->name('estad
 Route::get('/iniciar-sesion',[UsuariosController::class, 'index'])->name('usuarios.index');
 Route::get('/restaurar-contrasena',[UsuariosController::class, 'restaurarContrasena'])->name('usuarios.contrasena');
 Route::get('/registrarse',[UsuariosController::class, 'registrarse'])->name('usuarios.registrarse');
+Route::post('/iniciar-sesion/autenticar',[UsuariosController::class, 'autenticar'])->name('usuarios.autenticar');
+
+//Administrador
+Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard.index')
+->middleware(['auth', \App\Http\Middleware\CheckAdmin::class]);

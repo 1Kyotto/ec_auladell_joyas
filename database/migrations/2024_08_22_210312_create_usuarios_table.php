@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('usuarios', function (Blueprint $table) {
             $table->increments('id_usuario');
-            $table->string('nombre',30);
-            $table->string('telefono',9);
-            $table->string('email',30)->unique();
-            $table->string('contraseña',64);
+            $table->unsignedInteger('id_contacto');
+            $table->string('password',64);
           
             $table->char('rol',1)->default('C'); //'A' para Administrador, 'C' para Cliente.
             $table->timestamps();
+
+            $table->foreign('id_contacto')->references('id_contacto')->on('contactos');
         });
     }
 
