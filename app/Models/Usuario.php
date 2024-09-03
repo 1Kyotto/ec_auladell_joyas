@@ -16,7 +16,7 @@ class Usuario extends Authenticatable
 {
     use HasFactory;
 
-    //Especificaciones de nombre de la tabla y sus atributos
+    //Especificaciones de nombre de la tabla, sus atributos y funciones de cuenta
     protected $table = 'usuarios';
     protected $primaryKey = 'id_usuario';
     protected $fillable = ['id_contacto', 'contraseña', 'rol'];
