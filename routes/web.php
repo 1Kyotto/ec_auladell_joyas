@@ -11,6 +11,8 @@ use App\Http\Controllers\CollaresController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EstadoOrdenController;
 use App\Http\Controllers\UsuariosController;
+use App\Http\Controllers\ContactosController;
+
 
 Route::get('/',[HomeController::class, 'index'])->name('home.index');
 
@@ -24,6 +26,9 @@ Route::get('/joyas/collares',[CollaresController::class, 'index'])->name('collar
 
 //Productos
 Route::get('/estado-orden',[EstadoOrdenController::class, 'index'])->name('estado-orden.index');
+
+//Servicios
+Route::get('/contactanos',[ContactosController::class, 'index'])->name('contacto.index');
 
 //Usuarios
 Route::get('/iniciar-sesion',[UsuariosController::class, 'index'])->name('usuarios.index');
